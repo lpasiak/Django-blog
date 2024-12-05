@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    margin: 0;
+}
+
+#main-header {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#main-header a {
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+}
+
+#sidebar-wrapper {
+    width: 180px;
+    background: #111;
+    color: #fff;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Ensures vertical stacking */
+}
+
+#sidebar-wrapper .sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar-wrapper .sidebar-nav:last-of-type {
+    margin-top: auto; /* Keeps it pushed to the bottom */
+    padding-bottom: 20px; /* Adds spacing inside the bottom of the sidebar */
+}
+
+#sidebar-wrapper .sidebar-nav li {
+    line-height: 40px;
+    text-indent: 10px;
+}
+
+#sidebar-wrapper .sidebar-nav li a {
+    color: #999;
+    text-decoration: none;
+    display: block;
+}
+
+#sidebar-wrapper .sidebar-nav li a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#page-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.blog-post {
+    border: 1px solid #ddd; /* Adds a light border around each post */
+    padding: 20px; /* Adds inner spacing */
+    margin-bottom: 20px; /* Adds space between posts */
+    background-color: #f9f9f9; /* Gives a subtle background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a light shadow for depth */
+}
+
+.blog-post p {
+    margin: 0.5rem 0; /* Adds spacing between paragraphs */
+    color: #666; /* Slightly lighter text color */
+}
+
+.blog-post small {
+    color: #999; /* Muted color for date and author info */
+}
