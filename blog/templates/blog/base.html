@@ -29,9 +29,9 @@
         </ul>
         <ul class="sidebar-nav">
             {% if user.is_authenticated %}
-                <li>
+                <li class="profile-data">
                     <a href="{% url 'profile' %}">
-                        <i class="bi bi-person-circle"></i> {{ user.username }}
+                        <img width="25" class="rounded-circle" src="{{ user.profile.image.url }}" alt=""> {{ user.username }}
                     </a>
                 </li>
                 <li>
