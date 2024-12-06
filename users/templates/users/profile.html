@@ -1,9 +1,14 @@
 {% extends "blog/base.html" %}
 
 {% block content %}
-    <div class="blog-post">
+    <div class="blog-post d-flex align-items-center">
+        <!-- Profile Image -->
+        <img class="profile-pic rounded-circle me-3" src="{{ user.profile.image.url }}" alt="{{ user.username }}">
 
-        <h2>{{ user.username }}</h2>
-    
+        <!-- User Info -->
+        <div>
+            <h2>{{ user.username }}</h2>
+            <small>{{ user.email }}</small>
+        </div>
     </div>
 {% endblock content %}
