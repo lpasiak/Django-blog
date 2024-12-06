@@ -2,7 +2,7 @@
 {% block content %}
     {% for post in posts %}
     <div class="blog-post">
-        <h1>{{ post.title }}</h1>
+        <h2>{{ post.title }}</h2>
         <p><small>{{ post.author }} | {{ post.date_posted|date:"d E, Y, G:i" }}</small></p>
         <p>{{ post.content }}</p>
     </div>

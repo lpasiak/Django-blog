@@ -72,3 +72,7 @@ body {
 .blog-post small {
     color: #999; /* Muted color for date and author info */
 }
+
+a {
+    text-decoration: none;
+}

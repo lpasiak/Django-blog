@@ -23,15 +23,20 @@
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <h2 id="main-header"><a href="{% url 'blog-home' %}"> MyBlog</a></h2>
+            <h1 id="main-header"><a href="{% url 'blog-home' %}"> MyBlog</a></h1>
             <li><a href="{% url 'blog-home' %}"><i class="bi bi-house-door"></i> Home</a></li>
             <li><a href="{% url 'blog-about' %}"><i class="bi bi-info-circle-fill"></i> About</a></li>
         </ul>
         <ul class="sidebar-nav">
             {% if user.is_authenticated %}
                 <li>
+                    <a href="{% url 'profile' %}">
+                        <i class="bi bi-person-circle"></i> {{ user.username }}
+                    </a>
+                </li>
+                <li>
                     <a href="#" class="logout-link">
-                        <i class="bi bi-person-circle"></i> Logout
+                        <i class="bi bi-door-closed-fill"></i> Logout
                     </a>
                     <form id="logout-form" action="{% url 'logout' %}" method="post" style="display: none;">
                         {% csrf_token %}
