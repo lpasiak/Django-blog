@@ -2,7 +2,15 @@
 {% block content %}
     {% for post in posts %}
     <div class="blog-post">
-        <h2>{{ post.title }}</h2>
+        <h2 class="d-flex align-items-center">
+            <a href="{% url 'post-detail' post.id %}" style="color: #111;">{{ post.title }}</a>
+            <img
+                width="38"
+                height="38"
+                src="{{ post.author.profile.image.url }}"
+                alt="{{ post.author }}"
+                class="rounded-circle ms-2">
+        </h2>
         <p><small>{{ post.author }} | {{ post.date_posted|date:"d E, Y, G:i" }}</small></p>
         <p>{{ post.content }}</p>
     </div>
